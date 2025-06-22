@@ -64,7 +64,6 @@ docker-compose up --build
 ### 3. API Access
 
 - API available at: `http://localhost:8080/api`
-- Swagger/OpenAPI: *(add link if available)*
 
 ---
 
