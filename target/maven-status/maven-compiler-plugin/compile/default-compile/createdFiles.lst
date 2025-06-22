@@ -1,0 +1,11 @@
+com\iitb\courses\controller\CourseInstanceController.class
+com\iitb\courses\service\CourseInstanceService.class
+com\iitb\courses\entity\Course.class
+com\iitb\courses\entity\CourseInstance.class
+com\iitb\courses\App.class
+com\iitb\courses\service\CourseService.class
+com\iitb\courses\CoursesApiApplication$1.class
+com\iitb\courses\repository\CourseRepository.class
+com\iitb\courses\CoursesApiApplication.class
+com\iitb\courses\repository\CourseInstanceRepository.class
+com\iitb\courses\controller\CourseController.class
