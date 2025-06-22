@@ -93,12 +93,6 @@ docker-compose up --build
 
 ---
 
-## 📸 Screenshots
-
-> _Add screenshots of API responses or Postman collections here for extra polish!_
-
----
-
 ## 🤝 Author & Credits
 
 - **Author:** Gautam Govind
