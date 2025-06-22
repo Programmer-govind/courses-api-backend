@@ -12,7 +12,7 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   backend:
-    build: gautamgovind/courses-api
+    build: gautamgovind/courses-api:latest
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/coursesdb
       SPRING_DATASOURCE_USERNAME: admin
@@ -24,7 +24,7 @@ services:
       - db
 
   frontend:
-    build: gautamgovind/courses-frontend
+    build: gautamgovind/courses-frontend:latest
     ports:
       - "3000:80"
     depends_on:

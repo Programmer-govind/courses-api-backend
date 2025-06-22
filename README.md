@@ -1,73 +1,112 @@
-# Courses API Backend
+# 🚀 Courses API Backend
 
-This is a Spring Boot REST API for managing courses and course delivery instances, developed for the IIT Bombay ASC internship assignment.
+Welcome to the **Courses API** – a robust Spring Boot backend for managing courses and their instances, built for the IIT Bombay ASC Internship Assignment.
 
-## Features
+---
 
-- Create, list, and delete courses with prerequisite validation
-- Prevent deletion of courses that are prerequisites for others
-- Create, list, and delete course delivery instances
-- PostgreSQL database support (via Docker)
-- Proper error handling and HTTP status codes
+## ✨ Features
 
-## API Endpoints
+- **RESTful API** for managing courses and course instances
+- **PostgreSQL** database integration
+- **Robust validation** and error handling
+- **CORS enabled** for seamless frontend integration
+- **Dockerized** for easy deployment
+- **Ready for production** with DockerHub & Compose support
 
-- `POST /api/courses` — Create a new course (validates prerequisites)
-- `GET /api/courses` — List all courses (with prerequisites)
-- `GET /api/courses/{id}` — Get a single course (with prerequisites)
-- `DELETE /api/courses/{id}` — Delete a course (blocked if it is a prerequisite for another)
-- `POST /api/instances` — Create a new course instance
-- `GET /api/instances/{year}/{semester}` — List course instances for a year/semester
-- `GET /api/instances/{year}/{semester}/{courseId}` — Get details of a course instance
-- `DELETE /api/instances/{year}/{semester}/{courseId}` — Delete a course instance
+---
 
-## Running Locally
+## 📦 API Endpoints
 
-1. Build the project:
-   ```sh
-   mvn clean install
-   ```
-2. Run the application:
-   ```sh
-   mvn spring-boot:run
-   ```
-3. The API will be available at `http://localhost:8080/api/`
+- `GET /api/courses` – List all courses
+- `POST /api/courses` – Add a new course
+- `GET /api/courses/{id}` – Get course details
+- `PUT /api/courses/{id}` – Update a course
+- `DELETE /api/courses/{id}` – Delete a course
+- `GET /api/instances` – List all course instances
+- `POST /api/instances` – Add a new course instance
+- ...and more!
 
-## Running with Docker
+---
 
-1. Build the Docker image:
-   ```sh
-   docker build -t your-dockerhub-username/courses-api .
-   ```
-2. Run with Docker Compose (see root `docker-compose.yaml`):
-   ```sh
-   docker-compose up --build
-   ```
+## 🛠️ Tech Stack
 
-## Running with Docker Compose
+- **Java 17**
+- **Spring Boot 3**
+- **PostgreSQL 15**
+- **Maven**
+- **Docker & Docker Compose**
 
-1. Make sure you have Docker and Docker Compose installed.
-2. Clone this repository (and the frontend repository if separate).
-3. Ensure your `docker-compose.yaml` file is present in the project root (or as provided).
-4. Run the following command from the directory containing `docker-compose.yaml`:
-   ```sh
-   docker-compose up --build
-   ```
-5. This will start the database, backend, and frontend containers. The backend API will be available at `http://localhost:8080/api/` and the frontend at `http://localhost:3000/`.
-6. To stop the services, press `Ctrl+C` and then run:
-   ```sh
-   docker-compose down
-   ```
+---
 
-## Design & Implementation
+## 🚀 Quick Start
 
-- **Spring Boot** is used for rapid REST API development and easy integration with PostgreSQL.
-- **JPA/Hibernate** manages entity relationships, including many-to-many for prerequisites.
-- **Validation** ensures prerequisites exist before course creation and blocks deletion if dependencies exist.
-- **Error handling** uses appropriate HTTP status codes and clear messages.
+### 1. Clone the Repository
 
-## Justification
+```sh
+git clone <your-repo-url>
+cd courses-api
+```
 
-- Chose Spring Boot for its robustness, community support, and ease of REST API development.
-- Used Docker for reproducible, portable deployment and easy local testing.
-- Designed the API to be clear, RESTful, and easy to consume from any frontend.
+### 2. Run with Docker Compose
+
+**Recommended:** Use the root `docker-compose.yaml` to start the entire stack (backend, frontend, and database):
+
+```sh
+docker-compose up --build
+```
+
+Or, to run only the backend and database:
+
+```sh
+docker-compose up --build
+```
+
+### 3. API Access
+
+- API available at: `http://localhost:8080/api`
+- Swagger/OpenAPI: *(add link if available)*
+
+---
+
+## 🐳 Docker Usage
+
+### Build & Push Image
+
+```sh
+docker build -t <your-dockerhub-username>/courses-api:latest .
+docker push <your-dockerhub-username>/courses-api:latest
+```
+
+### Run with Docker Compose
+
+```sh
+docker-compose up --build
+```
+
+---
+
+## 📝 Assignment Justification
+
+- **All endpoints** and **validation** implemented as per requirements
+- **CORS** globally enabled for frontend integration
+- **Dockerized** for easy deployment and grading
+- **Documentation** provided for quick setup and usage
+
+---
+
+## 📸 Screenshots
+
+> _Add screenshots of API responses or Postman collections here for extra polish!_
+
+---
+
+## 🤝 Author & Credits
+
+- **Author:** Gautam Govind
+- **For:** IIT Bombay ASC Internship Assignment 2025
+
+---
+
+## 📄 License
+
+MIT License
