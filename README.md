@@ -44,6 +44,21 @@ This is a Spring Boot REST API for managing courses and course delivery instance
    docker-compose up --build
    ```
 
+## Running with Docker Compose
+
+1. Make sure you have Docker and Docker Compose installed.
+2. Clone this repository (and the frontend repository if separate).
+3. Ensure your `docker-compose.yaml` file is present in the project root (or as provided).
+4. Run the following command from the directory containing `docker-compose.yaml`:
+   ```sh
+   docker-compose up --build
+   ```
+5. This will start the database, backend, and frontend containers. The backend API will be available at `http://localhost:8080/api/` and the frontend at `http://localhost:3000/`.
+6. To stop the services, press `Ctrl+C` and then run:
+   ```sh
+   docker-compose down
+   ```
+
 ## Design & Implementation
 
 - **Spring Boot** is used for rapid REST API development and easy integration with PostgreSQL.
