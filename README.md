@@ -63,7 +63,7 @@ docker-compose up --build
 
 ### 3. API Access
 
-- API available at: `http://localhost:8080/api`
+- API available at: `http://localhost:8080/api/courses`
 
 ---
 
