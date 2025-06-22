@@ -52,7 +52,8 @@ cd courses-api
 **Recommended:** Use the root `docker-compose.yaml` to start the entire stack (backend, frontend, and database):
 
 ```sh
-docker-compose up --build
+docker-compose pull
+docker-compose up
 ```
 
 Or, to run only the backend and database:
